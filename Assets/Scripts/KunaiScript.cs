@@ -15,7 +15,7 @@ public class KunaiScript : MonoBehaviour
     }
 
     private void Update() {
-        Destroy(gameObject, 3);
+        Destroy(this.gameObject, 3);
     }
 
 }
