@@ -7,7 +7,7 @@ import math
 import socket
 
 UDP_IP = "127.0.0.1"
-UDP_PORT = 5065
+UDP_PORT = 7777
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
@@ -45,8 +45,12 @@ while True:
                 fingers.append(0)
 
         totalFingers = fingers.count(1)
-        print(totalFingers)
-        sock.sendto( ("totalFingers").encode(), (UDP_IP, UDP_PORT) )
+        #print(totalFingers)
+
+        if(totalFingers == 2):
+            sock.sendto( ("UP").encode(), (UDP_IP, UDP_PORT) )
+        if(totalFingers == 3):
+            sock.sendto( ("DOWN").encode(), (UDP_IP, UDP_PORT) )
 
     cTime = time.time()
     fps = 1/(cTime - pTime)

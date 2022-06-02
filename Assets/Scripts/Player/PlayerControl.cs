@@ -19,12 +19,14 @@ public class PlayerControl : MonoBehaviour
     private Rigidbody2D rb;
     private bool jump;
     private bool slide;
+    private bool jEnabled;
 
     void Start() 
     {
         rb = GetComponent<Rigidbody2D>();
-        port = 5065;
+        port = 7777;
         jump = false;
+        jEnabled = true;
 
         InitUDP();    
     }
@@ -48,10 +50,19 @@ public class PlayerControl : MonoBehaviour
 				IPEndPoint anyIP = new IPEndPoint(IPAddress.Parse("0.0.0.0"), port);
 				byte[] data = client.Receive(ref anyIP);
 
-				string text = Encoding.UTF8.GetString(data);
-				print (">> " + text);
+                string text = Encoding.UTF8.GetString(data);
+                string up = "UP";
+                string down = "DOWN";
+                
+                if(up == text)
+                {
+                    jump = true;
+                }
+                else if(down == text)
+                {
+                    slide = true;
+                }
 
-				jump = true;
 
 			} catch(Exception e)
 			{
@@ -67,7 +78,7 @@ public class PlayerControl : MonoBehaviour
 
     void movement()
     {
-        if(jump == true)
+        if(jump == true && jEnabled == true && slide == false)
         {
             rb.AddForce(
 			Vector3.up * jumpForce,
@@ -76,7 +87,7 @@ public class PlayerControl : MonoBehaviour
             anim.SetBool("Jumping", true);
 
         }
-        else if(slide == true)
+        else if(slide == true && jump == false)
         {
             anim.SetBool("Sliding", true);
         }
@@ -90,7 +101,15 @@ public class PlayerControl : MonoBehaviour
         
     }
 
+    void jumpEnable(){
+        jEnabled = true;
+    }
+        void jumpDisable(){
+        jEnabled = false;
+    }
+
     private void OnTriggerEnter2D(Collider2D other) {
+        
         Destroy(this.gameObject);
     }
 }
