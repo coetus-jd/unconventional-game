@@ -7,6 +7,9 @@ using System.Threading;
 using System;
 using UnityEngine;
 
+namespace Player
+{
+
 public class PlayerControl : MonoBehaviour
 {
 
@@ -20,6 +23,7 @@ public class PlayerControl : MonoBehaviour
     private bool jump;
     private bool slide;
     private bool jEnabled;
+    public bool die;
 
     void Start() 
     {
@@ -27,6 +31,7 @@ public class PlayerControl : MonoBehaviour
         port = 7777;
         jump = false;
         jEnabled = true;
+        die = false;
 
         InitUDP();    
     }
@@ -104,12 +109,14 @@ public class PlayerControl : MonoBehaviour
     void jumpEnable(){
         jEnabled = true;
     }
-        void jumpDisable(){
+    void jumpDisable(){
         jEnabled = false;
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        
+    void OnTriggerEnter2D(Collider2D other) {
+        die = true;
         Destroy(this.gameObject);
     }
 }
+}
+
