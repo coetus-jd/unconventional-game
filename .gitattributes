@@ -1,2 +1,8 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+*.cs linguist-language=csharp
+*.csproj linguist-language=csharp
+*.sln linguist-language=csharp
+*.md linguist-detectable=true
+*.md linguist-documentation=false
