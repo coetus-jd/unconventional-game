@@ -1,4 +1,4 @@
-# 🖐 Unconventional Game
+# 🖐🏻 Unconventional Game
 
 <p align="left">
 This project is a simple 2D game that uses the user's hand to control the player, aiming to use an input other than a keyboard or mouse, as part of an activity of the Graphic Computing discipline.
@@ -11,6 +11,7 @@ This project is a simple 2D game that uses the user's hand to control the player
 
 ## :eyes: Overview
 
+https://user-images.githubusercontent.com/42717522/172026158-9bb2ade5-2ad0-461b-b84f-c56b84128582.mp4
 
 ## 🏄‍♂️ Quick Start
  1. Clone this repository `git clone https://github.com/coetus-jd/unconventional-game.git`
