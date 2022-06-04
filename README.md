@@ -9,9 +9,12 @@ This project is a simple 2D game that uses the user's hand to control the player
   </a>
 </p>
 
+## :eyes: Overview
+
+
 ## 🏄‍♂️ Quick Start
  1. Clone this repository `git clone https://github.com/coetus-jd/unconventional-game.git`
- 2. Run the command `cd unconventional-game`
+ 2. Enter the project folder `cd unconventional-game`
  3. Run the hand detector `python ./Python/Trying.py`
  4. Open the `unconventional-game` folder with Unity and be happy 😄
 
