@@ -1,7 +1,7 @@
 # 🖐 Unconventional Game
 
 <p align="left">
-This project is a simple 2D game that uses the user's hand to control the player, aiming to use an input other than a keyboard or mouse.
+This project is a simple 2D game that uses the user's hand to control the player, aiming to use an input other than a keyboard or mouse, as part of an activity of the Graphic Computing discipline.
   <br><br>
   <!-- License -->
   <a>
@@ -11,7 +11,7 @@ This project is a simple 2D game that uses the user's hand to control the player
 
 ## 🏄‍♂️ Quick Start
  1. Clone this repository `git clone https://github.com/coetus-jd/unconventional-game.git`
- 2. Open the unconventional-game folder with Unity and be happy 😄
+ 2. Open the `unconventional-game` folder with Unity and be happy 😄
 
 ## :bricks: This project was built with: 
 - [Unity](https://unity.com/)
