@@ -20,3 +20,7 @@ This project is a simple 2D game that uses the user's hand to control the player
 - [Python](https://www.python.org/)
 - [OpenCV](https://opencv.org/)
 - [Mediapipe](https://mediapipe.dev/)
+
+## 📚 Learn more
+  * Introduction to Using OpenCV With Unity: https://www.raywenderlich.com/5475-introduction-to-using-opencv-with-unity
+  * Augmented Reality Colour Tracking: https://github.com/LegolaSir/RA_ColourTracking
